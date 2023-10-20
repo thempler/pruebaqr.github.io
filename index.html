@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        // Detectar el agente de usuario (user agent) para determinar el sistema operativo.
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        var isiOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+
+        if (isiOS) {
+            // Redirigir a la App Store de Apple
+            window.location.href = "https://apps.apple.com/co/app/jumper/id6446652683";
+        } else {
+            // Redirigir a la Google Play Store (Android)
+            window.location.href = "https://play.google.com/store/apps/details?id=com.jumper.customer";
+        }
+    </script>
+</head>
+<body>
+    <!-- Mensaje opcional que se mostrará antes de la redirección. -->
+    Redirigiendo a la tienda de aplicaciones...
+</body>
+</html>
